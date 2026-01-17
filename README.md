@@ -71,10 +71,11 @@ Chatbot Platform/
 - PostgreSQL 12+
 - pip
 
-### 2. Clone/Navigate to Project
+### 2. Clone Repository
 
 ```bash
-cd "C:\Users\Venkat\Downloads\Chatbot Platform"
+git clone https://github.com/buthuruvenkatareddy/ChatBot-Platform.git
+cd ChatBot-Platform
 ```
 
 ### 3. Create Virtual Environment
@@ -104,7 +105,7 @@ Or update the `.env` file with your PostgreSQL credentials.
 
 ### 6. Configure Environment Variables
 
-The `.env` file is already created with your OpenRouter API key. Update other variables if needed:
+Create a `.env` file in the project root and add the following variables:
 
 ```env
 DJANGO_SECRET_KEY=your-secret-key-here
@@ -114,8 +115,10 @@ DB_USER=postgres
 DB_PASSWORD=postgres
 DB_HOST=localhost
 DB_PORT=5432
-OPENROUTER_API_KEY=
+OPENROUTER_API_KEY=your-openrouter-api-key-here
 ```
+
+**Note**: Never commit your `.env` file to version control. It's already included in `.gitignore`.
 
 ### 7. Run Migrations
 
@@ -191,9 +194,9 @@ The project uses the **Mistral-7B-Instruct-Free** model from OpenRouter:
 
 - **Model**: `mistralai/mistral-7b-instruct-free`
 - **Endpoint**: `https://openrouter.ai/api/v1/chat/completions`
-- **API Key**: Set in `.env` file
+- **API Key**: Get your free API key from [OpenRouter](https://openrouter.ai/)
 
-The API key is already configured in your `.env` file.
+Set your API key in the `.env` file as shown in the configuration section above.
 
 ## Security Features
 
