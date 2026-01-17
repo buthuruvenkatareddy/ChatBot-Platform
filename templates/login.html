@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - AI Agent Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><span style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 8px; margin-right: 8px;"><i class="fas fa-bolt"></i></span>AI Agent Platform</h1>
+            <a href="/" class="btn btn-secondary">Back to Home</a>
+        </header>
+        
+        <main class="auth-content">
+            <div class="auth-form">
+                <h2><span style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 10px; margin-right: 10px;"><i class="fas fa-lock"></i></span>Sign In</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">Sign In</button>
+                </form>
+                
+                <div id="message" class="message"></div>
+                
+                <p class="auth-link">
+                    Don't have an account? <a href="/register/">Create one now</a>
+                </p>
+            </div>
+        </main>
+    </div>
+    
+    <script src="/static/js/auth.js"></script>
+</body>
+</html>

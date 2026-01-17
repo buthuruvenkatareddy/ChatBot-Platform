@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My AI Agents - Agent Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><span style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 8px; margin-right: 8px;"><i class="fas fa-robot"></i></span>My AI Agents</h1>
+            <button id="logoutBtn" class="btn btn-secondary">Sign Out</button>
+        </header>
+        
+        <main class="agents-content">
+            <section class="create-agent">
+                <h2><span style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 8px; margin-right: 8px; font-size: 16px;"><i class="fas fa-plus-circle"></i></span>Create New Agent</h2>
+                <form id="createAgentForm">
+                    <div class="form-group">
+                        <label for="agentName">Agent Name</label>
+                        <input type="text" id="agentName" name="name" placeholder="e.g., Code Assistant" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="agentDescription">Description</label>
+                        <textarea id="agentDescription" name="description" rows="2" placeholder="What does this agent do?"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="systemPrompt">System Prompt</label>
+                        <textarea id="systemPrompt" name="system_prompt" rows="5" 
+                                  placeholder="Define your agent's personality and behavior...">You are a helpful AI assistant.</textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Create Agent</button>
+                </form>
+            </section>
+            
+            <section class="agents-list">
+                <h2><span style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 8px; margin-right: 8px; font-size: 16px;"><i class="fas fa-list"></i></span>Your Agents</h2>
+                <div id="agentsList"></div>
+            </section>
+            
+            <div id="message" class="message"></div>
+        </main>
+    </div>
+    
+    <script src="/static/js/agents.js"></script>
+</body>
+</html>

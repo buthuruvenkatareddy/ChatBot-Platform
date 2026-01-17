@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - AI Agent Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="agentTitle"><span style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 8px; margin-right: 8px;"><i class="fas fa-comments"></i></span>Chat Session</h1>
+            <div style="display: flex; gap: 12px;">
+                <a href="/agents/" class="btn btn-secondary">Back to Agents</a>
+                <button id="logoutBtn" class="btn btn-secondary">Sign Out</button>
+            </div>
+        </header>
+        
+        <main class="chat-content">
+            <div class="chat-container">
+                <div id="chatMessages" class="chat-messages"></div>
+                
+                <form id="chatForm" class="chat-form">
+                    <input type="text" id="messageInput" placeholder="Type your message here..." required>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+            
+            <aside class="chat-sidebar">
+                <div>
+                    <h3><span style="display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 6px; margin-right: 8px; font-size: 14px;"><i class="fas fa-info-circle"></i></span>Agent Details</h3>
+                    <div id="agentInfo"></div>
+                </div>
+                
+                <div>
+                    <h3><span style="display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 6px; margin-right: 8px; font-size: 14px;"><i class="fas fa-cloud-upload-alt"></i></span>Upload Document</h3>
+                    <form id="uploadForm" class="upload-form">
+                        <label for="fileInput" style="display: block; color: var(--text-secondary); font-size: 14px; margin-bottom: 8px;">Select file to upload:</label>
+                        <input type="file" id="fileInput" name="file" required aria-label="Select file to upload">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 12px;">Upload</button>
+                    </form>
+                </div>
+                
+                <div>
+                    <h3><span style="display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 6px; margin-right: 8px; font-size: 14px;"><i class="fas fa-folder"></i></span>Documents</h3>
+                    <div id="filesList"></div>
+                </div>
+            </aside>
+        </main>
+        
+        <div id="message" class="message"></div>
+    </div>
+    
+    <script src="/static/js/chat.js"></script>
+</body>
+</html>
